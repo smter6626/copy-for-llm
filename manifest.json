@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Copy for LLM",
+  "version": "0.1.0",
+  "description": "一键把当前网页（正文 / Discord / Slack / Canvas / 表单）整理成 Markdown 复制到剪贴板，方便粘贴给 LLM。",
+  "permissions": ["activeTab", "scripting", "contextMenus", "clipboardWrite"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_title": "复制当前页面给 LLM（Alt+Shift+C）",
+    "default_icon": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png", "128": "icons/128.png" }
+  },
+  "icons": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png", "128": "icons/128.png" },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": { "default": "Alt+Shift+C", "mac": "Alt+Shift+C" },
+      "description": "复制当前页面给 LLM"
+    }
+  }
+}
